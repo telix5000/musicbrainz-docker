@@ -121,6 +121,16 @@ Docker images for composed services should be built once using:
 docker compose build
 ```
 
+### Build monolithic image
+
+A simplified Dockerfile is provided at the repository root to build a single
+container bundling all services (database, message queue, search, cache and
+web server). Build it with:
+
+```bash
+docker build -t musicbrainz-all-in-one .
+```
+
 ### Create database
 
 :gear: Postgres shared buffers are set to 2GB by default.
